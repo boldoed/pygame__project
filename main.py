@@ -278,6 +278,7 @@ def check_balls(dictt, coords=''):
 
 
 def game_loop():
+    global SCORE
     for i in range(5):
         create_balls(balls)
     center_create_balls(balls)
@@ -316,6 +317,7 @@ def game_loop():
                     for i in PORIADOK.keys():
                         PORIADOK[i] = ''
                     balls.empty()
+                    SCORE = 0
         sc.fill(BLACK)
         sc_text = f.render(str(SCORE), 10, (255, 255, 255))
         sc.blit(sc_text, (350, 20))
